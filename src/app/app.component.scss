@@ -1,0 +1,57 @@
+body {
+  background: #aaa;
+}
+
+textarea {
+    background-image: paint(triangle);
+}
+
+div {
+  position: relative;
+  border: 1px solid #333;
+  width: 300px;
+  height: 500px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff;
+  filter: drop-shadow(1px 1px 1px #000);
+  &::before {
+
+  --arrow-pos-left: 25px;
+  --arrow-height: 25px;
+  --arrow-width: 60px;
+  --arrow-fill: #fff;
+  --arrow-stroke: #333;
+
+    content: '';
+    position: absolute;
+    top: calc(var(--arrow-height) * -1);
+    left: var(--arrow-pos-left);
+    display: block;
+    width: var(--arrow-width);
+    height: var(--arrow-height);
+    background: paint(triangle);
+  }
+}
+
+span {
+  --radio-width: 30px;
+  --radio-height: 30px;
+  --radio-fill: #f00;
+  --radio-stroke: #333;
+  --radio-inner-width: 8px;
+
+  display: block;
+  margin: 20px 0;
+  width: var(--radio-width);
+  height: var(--radio-height);
+
+  // outline: 1px solid blue;
+  // outline-offset: 2px;
+
+  background: paint(radio);
+  transition: --radio-inner-width 1s;
+  &:hover {
+    --radio-inner-width: 13px;
+  }
+}

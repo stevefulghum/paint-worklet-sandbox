@@ -78,3 +78,78 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+if (CSS.hasOwnProperty('registerProperty')){
+  CSS.registerProperty({
+    name: '--arrow-pos-left',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--arrow-width',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--arrow-height',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--arrow-fill',
+    syntax: '<color>',
+    initialValue: 'rgba(255,255,255)',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--arrow-stroke',
+    syntax: '<color>',
+    initialValue: 'rgba(255,255,255)',
+    inherits: true
+  });
+
+    CSS.registerProperty({
+    name: '--radio-width',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--radio-height',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--radio-inner-width',
+    syntax: '<length>',
+    initialValue: '0px',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--radio-fill',
+    syntax: '<color>',
+    initialValue: 'rgba(255,255,255)',
+    inherits: true
+  });
+
+  CSS.registerProperty({
+    name: '--radio-stroke',
+    syntax: '<color>',
+    initialValue: 'rgba(255,255,255)',
+    inherits: true
+  });
+}
+
+  CSS.paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/mjqpJX.js');
+  CSS.paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/djjPzE.js');

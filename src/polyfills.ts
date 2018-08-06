@@ -80,70 +80,70 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 if (CSS.hasOwnProperty('registerProperty')){
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--arrow-pos-left',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--arrow-width',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--arrow-height',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--arrow-fill',
     syntax: '<color>',
     initialValue: 'rgba(255,255,255)',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--arrow-stroke',
     syntax: '<color>',
     initialValue: 'rgba(255,255,255)',
     inherits: true
   });
 
-    CSS.registerProperty({
+    (CSS as any).registerProperty({
     name: '--radio-width',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--radio-height',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--radio-inner-width',
     syntax: '<length>',
     initialValue: '0px',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--radio-fill',
     syntax: '<color>',
     initialValue: 'rgba(255,255,255)',
     inherits: true
   });
 
-  CSS.registerProperty({
+  (CSS as any).registerProperty({
     name: '--radio-stroke',
     syntax: '<color>',
     initialValue: 'rgba(255,255,255)',
@@ -151,5 +151,8 @@ if (CSS.hasOwnProperty('registerProperty')){
   });
 }
 
-  CSS.paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/mjqpJX.js');
-  CSS.paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/djjPzE.js');
+  // (CSS as any).paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/mjqpJX.js');
+  // (CSS as any).paintWorklet.addModule('https://codepen.io/steve_fulghum/pen/djjPzE.js');
+
+(CSS as any).paintWorklet.addModule('../paint-worklet-triangle/triangleWorklet.js');
+(CSS as any).paintWorklet.addModule('../paint-worklet-triangle/radioButtonWorklet.js');
